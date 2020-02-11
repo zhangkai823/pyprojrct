@@ -17,5 +17,7 @@ class Hero(models.Model):
     name = models.CharField(max_length=20)
     gender = models.CharField(max_length=5,choices=(('male','男'),('female','女')),default='male')
     content = models.CharField(max_length=100)
-    #book是一对多的外检 on_delete代表删除主数据是如何做
-    book = models.ForeignKey(Book,on_delete=models.CASCADE())
+
+    # book是一对多的外检 on_delete代表删除主数据是如何做
+
+    book = models.ForeignKey(Book,on_delete=models.CASCADE)
